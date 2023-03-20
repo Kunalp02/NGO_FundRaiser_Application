@@ -20,3 +20,11 @@ export const checkIfImage = (url, callback) => {
   img.onload = () => callback(true);
   img.onerror = () => callback(false);
 };
+
+
+export const checkAdd =  async function searchAddress(address) {
+  const response = await fetch(`https://api.blockchain.info/balance?active=${address}`);
+  const data = await response.json();
+  console.log(data);
+  setResults(data);
+}

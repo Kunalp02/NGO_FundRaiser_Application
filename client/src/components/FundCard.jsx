@@ -1,5 +1,6 @@
 import React from 'react';
-
+import {WhatsappShareButton, WhatsappIcon, TwitterShareButton, TwitterIcon, EmailShareButton, EmailIcon,
+  FacebookShareButton, FacebookIcon} from "react-share";
 import { tagType, thirdweb } from '../assets';
 import { daysLeft } from '../utils';
 
@@ -38,9 +39,50 @@ const FundCard = ({ owner, title, description, target, deadline, amountCollected
           </div>
           <p className="flex-1 font-epilogue font-normal text-[12px] text-[#808191] truncate">by <span className="text-[#b2b3bd]">{owner}</span></p>
         </div>
+
       </div>
 
-          <button class="ml-2 mb-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"> Share Campaign </button>
+      <div className="ml-2">
+                <WhatsappShareButton className='ml-1' url="https://www.youtube.com/"
+                quote = {"Hey Click on this link to donate the fund "} 
+                hashtag="#React">                   
+                <WhatsappIcon  size={30} logoFillColor="black" round= {true} >
+
+                </WhatsappIcon>
+
+                </WhatsappShareButton>
+
+
+                <TwitterShareButton className='ml-1' url="https://www.youtube.com/"
+                quote = {"Hey"} 
+                hashtag="#React">                   
+                <TwitterIcon size={30} logoFillColor="black" round= {true} >
+
+                </TwitterIcon>
+                </TwitterShareButton>     
+
+
+                <FacebookShareButton className='ml-1' url="https://www.youtube.com/"
+                quote = {"Hey"} 
+                hashtag="#React">                   
+                <FacebookIcon size={30} logoFillColor="black" round= {true} >
+
+                </FacebookIcon>
+                </FacebookShareButton> 
+
+
+
+                <EmailShareButton className='ml-1' url="https://www.youtube.com/"
+                quote = {"Hey"} 
+                hashtag="#React">
+                    <EmailIcon size={30} logoFillColor="black" round= {true} >
+                      
+                    </EmailIcon>
+              </EmailShareButton>   
+        </div>
+
+
+
 
     </div>
   )

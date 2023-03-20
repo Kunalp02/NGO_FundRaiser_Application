@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
+import Iframe from 'react-iframe'
 
 import { useStateContext } from '../context';
 import { CustomButton } from './';
@@ -13,17 +14,18 @@ const Navbar = () => {
   const { connect, address, logout } = useStateContext();
 
   
-  const handleRedirect = () => {
+  const handleRedirect1 = () => {
     window.location.href = 'https://thirdweb.com/goerli/0xb026a401Bd49ef0831dE45056663eAA105CB0d47/events'; // replace with your link
   }
 
-  const disconnect = async () => {
-    try {
-      await logout();
-    } catch (error) {
-      console.log("logout error", error);
-    }
-  };
+  const handleRedirect2 = () => {
+    window.location.href = 'https://www.blockchain.com/explorer'; // replace with your link
+
+  }
+
+  const verifyAddress = () => {
+    navigate('WalletSearchAddress');
+  }
 
 
   return (
@@ -32,8 +34,8 @@ const Navbar = () => {
       <div className="sm:flex hidden flex-row justify-end gap-4">
         <CustomButton 
           btnType="button"
-          title={address ? 'Create your fundraiser' : 'Connected'}
-          styles={address ? 'bg-[#1c1917]' : 'bg-[#991b1b]'}
+          title={address ? 'Create your fundraiser' : 'Connect'}
+          styles={address ? 'bg-[#1dc071]' : 'bg-[#1dc071]'}
           handleClick={() => {
             if(address) navigate('create-campaign')
             else connect()
@@ -44,8 +46,18 @@ const Navbar = () => {
           btnType="button"
           title="Track"
           styles="bg-[#1c1917]"
-          handleClick={handleRedirect}
+          handleClick={handleRedirect1}
         />
+
+
+        <CustomButton 
+          btnType="button"
+          title="Dashboard"
+          styles="bg-[#1c1917]"
+          handleClick={handleRedirect2}
+        />
+
+<button type="search" className='font-epilogue font-semibold text-[16px] leading-[26px] text-white min-h-[52px] px-4 rounded-[10px] bg-gray-900' onClick={verifyAddress}>Verify Address</button>
 
         <CustomButton 
           btnType="button"
@@ -107,7 +119,7 @@ const Navbar = () => {
             <CustomButton 
               btnType="button"
               title={address ? 'Create a campaign' : 'Connect'}
-              styles={address ? 'bg-[#1dc071]' : 'bg-[#8c6dfd]'}
+              styles={address ? 'bg-[#1dc071]' : 'bg-[#1dc071]'}
               handleClick={() => {
                 if(address) navigate('create-campaign')
                 else connect();
@@ -118,8 +130,17 @@ const Navbar = () => {
             btnType="button"
             title="Track"
             styles="ml-2 bg-[#1c1917]"
-            handleClick={handleRedirect}
+            handleClick={handleRedirect1}
         />
+
+        <CustomButton 
+            btnType="button"
+            title="Dashboard"
+            styles="ml-2 bg-[#1c1917]"
+            handleClick={handleRedirect2}
+        />
+
+<button type="search" className='ml-1 mr-2 font-epilogue font-semibold text-[16px] leading-[26px] text-white min-h-[52px] p-1 rounded-[10px] bg-gray-900' onClick={verifyAddress}>Verify Address</button>
 
         <CustomButton 
           btnType="button"
