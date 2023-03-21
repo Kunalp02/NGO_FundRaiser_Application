@@ -43,7 +43,7 @@ const FundCard = ({ owner, title, description, target, deadline, amountCollected
       </div>
 
       <div className="ml-2">
-                <WhatsappShareButton className='ml-1' url="https://www.youtube.com/"
+                <WhatsappShareButton className='ml-1' url="https://moonlit-dusk-390059.netlify.app/"
                 quote = {"Hey Click on this link to donate the fund "} 
                 hashtag="#React">                   
                 <WhatsappIcon  size={30} logoFillColor="black" round= {true} >
@@ -53,8 +53,8 @@ const FundCard = ({ owner, title, description, target, deadline, amountCollected
                 </WhatsappShareButton>
 
 
-                <TwitterShareButton className='ml-1' url="https://www.youtube.com/"
-                quote = {"Hey"} 
+                <TwitterShareButton className='ml-1' url="https://moonlit-dusk-390059.netlify.app/"
+                quote = {"Hey Click on this link to donate the fund"} 
                 hashtag="#React">                   
                 <TwitterIcon size={30} logoFillColor="black" round= {true} >
 
@@ -62,8 +62,8 @@ const FundCard = ({ owner, title, description, target, deadline, amountCollected
                 </TwitterShareButton>     
 
 
-                <FacebookShareButton className='ml-1' url="https://www.youtube.com/"
-                quote = {"Hey"} 
+                <FacebookShareButton className='ml-1' url="https://moonlit-dusk-390059.netlify.app/"
+                quote = {"Hey Click on this link to donate the fund"} 
                 hashtag="#React">                   
                 <FacebookIcon size={30} logoFillColor="black" round= {true} >
 
@@ -72,8 +72,8 @@ const FundCard = ({ owner, title, description, target, deadline, amountCollected
 
 
 
-                <EmailShareButton className='ml-1' url="https://www.youtube.com/"
-                quote = {"Hey"} 
+                <EmailShareButton className='ml-1' url="https://moonlit-dusk-390059.netlify.app/"
+                quote = {"Hey Click on this link to donate the fund"} 
                 hashtag="#React">
                     <EmailIcon size={30} logoFillColor="black" round= {true} >
                       
