@@ -114,7 +114,7 @@ const Navbar = () => {
               ))}
             </ul>
 
-            <div className="flex mx-4">
+            <div className="flex flex-wrap mx-4">
             <CustomButton 
               btnType="button"
               title={address ? 'Create a campaign' : 'Connect'}
@@ -139,14 +139,15 @@ const Navbar = () => {
             handleClick={handleRedirect2}
         />
 
-<button type="search" className='ml-1 mr-2 font-epilogue font-semibold text-[16px] leading-[26px] text-white min-h-[52px] p-1 rounded-[10px] bg-gray-900' onClick={verifyAddress}>Verify Address</button>
-
+        <button type="search" className='ml-1 mr-2 font-epilogue font-semibold text-[16px] leading-[26px] text-white min-h-[52px] p-1 rounded-[10px] bg-gray-900' onClick={verifyAddress}>Verify Address</button>
         <CustomButton 
           btnType="button"
           title="Logout"
           styles="ml-2 bg-[#1c1917]"
           handleClick={logout}
         />  
+
+      
 
             </div>
           </div>
