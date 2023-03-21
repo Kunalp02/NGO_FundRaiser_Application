@@ -15,12 +15,11 @@ const Navbar = () => {
 
   
   const handleRedirect1 = () => {
-    window.location.href = 'https://thirdweb.com/goerli/0xb026a401Bd49ef0831dE45056663eAA105CB0d47/events'; // replace with your link
+    window.location.href = 'https://thirdweb.com/goerli/0xb026a401Bd49ef0831dE45056663eAA105CB0d47/events'; 
   }
 
   const handleRedirect2 = () => {
-    window.location.href = 'https://www.blockchain.com/explorer'; // replace with your link
-
+    window.location.href = 'https://www.blockchain.com/explorer'; 
   }
 
   const verifyAddress = () => {
